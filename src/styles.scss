@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+$color-primary: #ff8e00;
+$color-primary-hover: #f9b560;
 .flex-1 {
     flex: 1;
 }
@@ -33,5 +36,18 @@
 @media screen and (max-width:575px) {
     .grid {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* buttons styling */
+.btn {
+    &.primary {
+        background-color: $color-primary;
+        border: 1px solid $color-primary;
+        color: white;
+        &:hover {
+            background-color: $color-primary-hover;
+            border:1px solid $color-primary-hover;
+            color: white;
+        }
     }
 }
