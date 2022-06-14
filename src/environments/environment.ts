@@ -4,7 +4,16 @@
 
 export const environment = {
   production: false,
-  appname: 'Rentogar'
+  appname: 'Rentogar',
+  firebase: {
+    apiKey: "AIzaSyBtw0vVsMN1_AbUHMtR61mmjiiQFXl5OpE",
+    authDomain: "rentogar-26e44.firebaseapp.com",
+    projectId: "rentogar-26e44",
+    storageBucket: "rentogar-26e44.appspot.com",
+    messagingSenderId: "974864588422",
+    appId: "1:974864588422:web:890c1a257408a1960efb07",
+    measurementId: "G-PT1S8WRT39"
+  }
 };
 
 /*

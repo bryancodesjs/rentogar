@@ -8,6 +8,14 @@ import { NewListingComponent } from './views/new-listing/new-listing/new-listing
 import { HomeComponent } from './views/home/home/home.component';
 import { NavbarComponent } from './views/shared/navbar/navbar.component';
 
+//FIREBASE MODULES
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage'
+import { environment } from 'src/environments/environment';
+
+import {HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +26,13 @@ import { NavbarComponent } from './views/shared/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // 3. Initialize
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
